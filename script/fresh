@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+function main {
+  case "$(uanme-s)" in
+    Darwin)
+      return 0
+      ;;
+  esac
+
+  if ! type -P syslog-ng >/dev/null; then
+    return 1
+  fi
+
+  return 0
+}
+
+main "$@"

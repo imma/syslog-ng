@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+function main {
+	case "$(uname -s)" in
+		Linux)
+			pkg ensure sysutils/syslog-ng
+			pkg ensure sysutils/syslog-ng-json
+			;;
+	esac
+}
+
+main "$@"
