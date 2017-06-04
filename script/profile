@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function _syslog_ng_profile {
-  local shome="${_syslog_ng_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
+  local shome="${_syslog_ng_home:="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
 }
 
 _syslog_ng_profile
