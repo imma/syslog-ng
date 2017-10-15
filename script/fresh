@@ -5,10 +5,8 @@ function main {
   source "$shome/script/profile"
   source normalize  
 
-  case "$(uname -s)" in
-    Darwin)
-      return 0
-      ;;
+  case "${DISTRIB_ID}" in
+    Darwin) return 0 ;;
   esac
 
   if ! type -P syslog-ng >/dev/null; then
