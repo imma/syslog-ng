@@ -6,7 +6,10 @@ function main {
   source normalize  
 
 	case "${DISTRIB_ID}" in
-		Ubuntu|Amazon)
+    Darwin) 
+      true 
+      ;;
+		*)
 			pkg ensure sysutils/syslog-ng
 			pkg ensure sysutils/syslog-ng-json
 			;;
